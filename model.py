@@ -81,7 +81,7 @@ fish_data[["Length1", "Length2", "Length3"]].head(10)
 
 
 #Length1 and 2 have more correlation so dropping one
-fish_data = fish_data.drop(["Length1"], axis=1)
+#fish_data = fish_data.drop(["Length1"], axis=1)
 
 # Selecting features and target variable
 X = fish_data.drop('Weight', axis=1)
