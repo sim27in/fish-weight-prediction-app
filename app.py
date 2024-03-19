@@ -11,9 +11,10 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    input_features = [request.form.get('Species'), float(request.form.get('Length1')), float(request.form.get('Length2')), float(request.form.get('Length3')), 
-                      float(request.form.get('Height')), float(request.form.get('Width'))]  # Continue for other features
-    input_df = pd.DataFrame([input_features], columns=['Species', 'Length1', 'Length2', 'Length3' , 'Height', 'Width'])  # Continue for other columns
+    input_features = [request.form.get('Species'), float(request.form.get('Length1')), float(request.form.get('Length2')), 
+    float(request.form.get('Length3')), 
+    float(request.form.get('Height')), float(request.form.get('Width'))] 
+    input_df = pd.DataFrame([input_features], columns=['Species', 'Length1', 'Length2', 'Length3' , 'Height', 'Width'])  
     prediction = model.predict(input_df)[0]
     return jsonify({'prediction': prediction})
 
