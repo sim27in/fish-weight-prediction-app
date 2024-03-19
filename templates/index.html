@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fish Weight Prediction</title>
+    <title>Fish Weight Prediction App</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { padding: 20px; }
@@ -16,10 +16,8 @@
             <select class="form-control" id="Species" name="Species">
                 <option>Bream</option>
                 <option>Roach</option>
-                <!-- Add other species options -->
             </select>
         </div>
-        <!-- Example for Length3 Slider -->
         <div class="form-group">
             <label for="Length1">Length1 (cm): <span id="Length1Value">30</span></label>
             <input type="range" class="custom-range" id="Length1" name="Length1" min="1" max="100" value="30", step="0.1">
@@ -33,22 +31,21 @@
             <input type="range" class="custom-range" id="Length3" name="Length3" min="1" max="100" value="30",  step="0.1">
         </div>
         <div class="form-group">
-            <label for="Height">Height (cm): <span id="HeightValue">20</span></label>
+            <label for="Height">Height (cm): <span id="HeightValue">10</span></label>
             <input type="range" class="custom-range" id="Height" name="Height" min="1" max="20" value="10", step="0.1">
         </div>
         <div class="form-group">
-            <label for="Width">Width (cm): <span id="WidthValue">10</span></label>
+            <label for="Width">Width (cm): <span id="WidthValue">3</span></label>
             <input type="range" class="custom-range" id="Width" name="Width" min="1" max="10" value="3",  step="0.1">
         </div>
-        <!-- Add other sliders similarly -->
-        <button type="submit" class="btn btn-primary">Predict</button>
+        <button type="submit" class="btn btn-primary">Predict Weight</button>
     </form>
     <div id="predictionResult" class="mt-3"></div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
-// Update sliders value dynamically
+
 $('input[type="range"]').on('input', function() {
     $(`#${this.id}Value`).text(this.value);
 });
