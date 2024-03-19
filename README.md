@@ -15,7 +15,7 @@ Implementation of RandomForestRegressor for robust and accurate predictions.
 To run this application locally, follow these steps:
 
 ## Clone the Repository
-git clone https://github.com/yourusername/fish-weight-predictor.git
+git clone https://github.com/sim27in/fish-weight-prediction-app.git
 cd fish-weight-predictor
 
 ## Create and Activate a Virtual Environment (optional)
